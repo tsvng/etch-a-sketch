@@ -27,13 +27,25 @@ gridPieces.forEach((piece) =>
     })
 );
 
+function rebootGrid() {
+    spawnGrid(gridSize);
+    const gridPieces = document.querySelectorAll(".grid-piece");
+    gridPieces.forEach((piece) =>
+        piece.addEventListener("mouseenter", function (e) {
+            piece.classList.add("touched");
+        })
+    );
+}
 const newGrid = document.querySelector(".clear");
 newGrid.addEventListener("click", function (e) {
-    gridSize = prompt("Desired grid square-dimension?");
+    gridSize = prompt(
+        "Desired grid square-dimension?\n There is a max size of 100."
+    );
+    gridSize > 100 ? (gridSize = 100) : gridSize;
     removeAllChildNodes(gridRow);
     removeAllChildNodes(grid);
-    spawnGrid(gridSize);
     gridPieces.forEach((piece) => piece.classList.remove("touched"));
+    rebootGrid();
 });
 
 function removeAllChildNodes(parent) {

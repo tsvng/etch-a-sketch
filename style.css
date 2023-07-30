@@ -7,16 +7,20 @@ body {
 .grid-container {
     display: flex;
     border: solid 2px black;
-    flex-wrap: wrap;
     width: 960px;
     height: 960px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.grid-row {
+    display: flex;
+    flex: 1;
 }
 
 .grid-piece {
-    border: 1px solid;
-    height: 40px;
-    width: 40px;
+    flex: 1;
 }
 
 .touched {
