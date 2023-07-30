@@ -1,5 +1,5 @@
 body {
-    max-width: 500px;
+    max-width: 1000px;
     margin: auto;
     margin-top: 175px;
 }
@@ -8,7 +8,8 @@ body {
     display: flex;
     border: solid 2px black;
     flex-wrap: wrap;
-    width: 672px;
+    width: 960px;
+    height: 960px;
     margin-bottom: 10px;
 }
 
