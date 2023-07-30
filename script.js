@@ -14,3 +14,10 @@ for (let j = 0; j < 16; j++) {
 for (let i = 0; i < 16; i++) {
     grid.appendChild(gridRow.cloneNode(true));
 }
+
+const gridPieces = document.querySelectorAll(".grid-piece");
+gridPieces.forEach((piece) =>
+    piece.addEventListener("mouseenter", function (e) {
+        piece.classList.add("touched");
+    })
+);

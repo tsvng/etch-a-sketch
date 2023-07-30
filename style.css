@@ -1,23 +1,23 @@
-body,
-div {
-    display: flex;
-}
-
 body {
-    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 175px;
 }
 
 .grid-container {
+    display: flex;
     border: solid 2px black;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     width: 672px;
+    margin-bottom: 10px;
 }
 
 .grid-piece {
     border: 1px solid;
-    display: border-box;
     height: 40px;
     width: 40px;
+}
+
+.touched {
+    background-color: aquamarine;
 }
